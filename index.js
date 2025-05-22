@@ -65,7 +65,7 @@ app.post("/submit-enquiry", async (req, res) => {
 
     // Save to database
     await pool.query(
-      `INSERT INTO enquiries (name, phone, email, service, place, message) 
+      `INSERT INTO annpurnaEnquiries (name, phone, email, service, place, message) 
        VALUES (?, ?, ?, ?, ?, ?)`,
       [name, phone, email, service, place, message]
     );
@@ -104,7 +104,7 @@ app.post("/submit-quote", async (req, res) => {
 
     console.log("Attempting to save to database...");
     const [result] = await pool.query(
-      `INSERT INTO quotes (name, phone, email, price, height, material, finish) 
+      `INSERT INTO annpurnaQuotes (name, phone, email, price, height, material, finish) 
        VALUES (?, ?, ?, ?, ?, ?, ?)`,
       [name, phone, email, price, height, material, finish]
     );
