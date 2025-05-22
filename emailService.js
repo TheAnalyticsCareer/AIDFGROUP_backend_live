@@ -69,8 +69,8 @@ async function sendEmail(type, data) {
     const template = emailTemplates[type](data);
 
     const mailOptions = {
-      from: `"Sales AnnapurnaInteriors Enquiry" <${process.env.EMAIL_USER}>`,
-      to: "info@annapurnainteriors.com",
+      from: `"Sales Aidf Group Enquiry" <${process.env.EMAIL_USER}>`,
+      to: "sales@aidfgroup.com",
       subject: template.subject,
       html: template.html,
     };
